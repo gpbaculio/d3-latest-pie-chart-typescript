@@ -1,1 +1,1 @@
-![Image of Yaktocat](https://imgur.com/2cuCAjc)
+![Preview](https://i.imgur.com/2cuCAjc.png)
