@@ -3,6 +3,7 @@ import Pie from "./Pie";
 import Donut from "./Donut";
 import Radar from "./Radar";
 import Counties from "./Counties";
+import RoundedDonut from "./RoundedDonut";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Donut />
       <Radar />
       <Counties />
+      <RoundedDonut />
     </div>
   );
 }
