@@ -4,6 +4,7 @@ import Donut from "./Donut";
 import Radar from "./Radar";
 import Counties from "./Counties";
 import RoundedDonut from "./RoundedDonut";
+import IncompleteRoundDoughnut from "./IncompleteRoundDoughnut";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Radar />
       <Counties />
       <RoundedDonut />
+      <IncompleteRoundDoughnut />
     </div>
   );
 }
