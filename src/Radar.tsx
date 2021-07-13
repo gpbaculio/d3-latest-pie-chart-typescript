@@ -82,14 +82,14 @@ const Radar = () => {
       const drawText = (
         text: string,
         point: [number, number],
-        isAxis: any,
+        isAxis: boolean,
         group: any
       ) => {
         if (isAxis) {
           const xSpacing = text.toString().includes(".") ? 30 : 22;
           group
             .append("text")
-            .attr("x", point[0] - xSpacing)
+            .attr("x", point[0])
             .attr("y", point[1] + 5)
             .html(text)
             .style("text-anchor", "middle")
@@ -99,21 +99,28 @@ const Radar = () => {
         } else {
           group
             .append("text")
+
             .attr("x", point[0])
-            .attr("y", point[1])
+            .attr("y", point[1] + 3)
             .html(text)
             .style("text-anchor", "middle")
             .attr("fill", "darkgrey")
             .style("font-size", "12px")
             .style("font-family", "sans-serif");
+          group
+            .append("circle")
+            .attr("cx", () => {
+              return point[0];
+            })
+            .attr("cy", () => point[1])
+            .attr("r", 2);
         }
       };
       const groupL = g.append("g").attr("class", "labels");
       for (let vertex = 0; vertex < sideCount; vertex++) {
         const angle = vertex * polyangle;
         const label = dataset[vertex].name;
-        const point = generatePoint({ length: 0.9 * (size / 2), angle });
-
+        const point = generatePoint({ length: 0.93 * (size / 2), angle });
         drawText(label, point, false, groupL);
       }
     };
