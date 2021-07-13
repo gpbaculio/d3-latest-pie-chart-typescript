@@ -30,7 +30,7 @@ const Counties = () => {
     const svg = d3
       .select(".counties")
       .append("svg")
-      .attr("viewBox", "0, 0, 975, 610");
+      .attr("viewBox", "10, 10, 975, 610");
     svg
       .append("path")
       .datum(
@@ -57,7 +57,7 @@ const Counties = () => {
       .attr("d", path);
     const radius = d3.scaleSqrt(
       [0, d3.max(data, (d) => d.value) as number],
-      [5, 40]
+      [8, 40]
     );
     const scaleText = d3.scaleSqrt(
       [0, d3.max(data, (d) => d.value) as number],
